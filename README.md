@@ -34,10 +34,10 @@ O que veremos na aula de hoje?
   - [Recapitulando](#recapitulando)
     - [ES6 Instantiation](#es6-instantiation)
   
-  - [Paradigmas de programação](./05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
-  - [Programação Orientada a Objetos](./05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
-  - [Pilares de OO - Abstração](#mudar)
-  - [Pilares de OO - Encapsulamento](#mudar)
+  - [Paradigmas de programação](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.1%20-%20Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
+  - [Programação Orientada a Objetos](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.2%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
+  - [Pilares de OO - Abstração](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.3%20-%20Abstra%C3%A7%C3%A3o.md)
+  - [Pilares de OO - Encapsulamento](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.4%20-%20Encapsulamento.md)
 
 <!-- - [Exercícios](#exercícios)
 - [Material da aula](#material-da-aula)
@@ -78,10 +78,10 @@ console.log(animal1);
 
 Spoiler: quando escrevemos nosso programa dessa maneira, estamos utilizando a **Programação Orientada a Objetos**. Dá pra perceber desde já o porquê ela leva esse nome, né? Estamos tratando, desde o início, de objetos e de maneiras de criá-los e modificá-los.
 
-## [Paradigmas de programação](./05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
-## [Programação Orientada a Objetos](./05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
-## [Pilares de OO - Abstração](#mudar)
-## [Pilares de OO - Encapsulamento](#mudar)
+## [Paradigmas de programação](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.2%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
+## [Programação Orientada a Objetos](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.2%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
+## [Pilares de OO - Abstração](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.3%20-%20Abstra%C3%A7%C3%A3o.md)
+## [Pilares de OO - Encapsulamento](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.4%20-%20Encapsulamento.md)
 
 <!-- ### Exercícios
 
