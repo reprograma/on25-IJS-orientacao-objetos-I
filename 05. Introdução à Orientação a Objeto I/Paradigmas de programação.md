@@ -5,10 +5,14 @@
 ### Resumo
 - [Paradigmas de programação](#paradigmas-de-programação)
   - [Conceito](#conceito)
+  - [Tipos de paradigmas](#tipos-de-paradigmas)
+    - [Paradigmas Imperativos](#paradigmas-imperativos)
+      - [Programação Estruturada](#programação-estruturada)
+      - [Programação Orientada a Objetos (POO ou OOP ou OO)](#programação-orientada-a-objetos-poo-ou-oop-ou-oo)
+    - [Paradigmas Declarativos](#paradigmas-declarativos)
+      - [Programação Funcional](#programação-funcional)
+    - [Outros paradigmas](#outros-paradigmas)
 
-
-- [Exercícios](#exercícios)
-- [Material da aula](#material-da-aula)
 - [Links Úteis](#links-úteis)
 
 # Paradigmas de programação
@@ -166,27 +170,12 @@ Caso queira entender melhor sobre, assista o vídeo abaixo:
 - Orientado a Dados
 - Orientado a Eventos
 
-<!-- ### Exercícios
-
-- [Exercício para sala](/exercicios/para-sala/)
-- [Exercício para casa](/exercicios/para-casa/)
-
-### Material da aula
-
-- [Material](/material)
-
-### Links Úteis
+# Links Úteis
 - [Geek Hunter - Quais são os paradigmas de programação mais importantes?](https://blog.geekhunter.com.br/quais-sao-os-paradigmas-de-programacao/)
 - [Medium - Paradigmas de Programação](https://medium.com/zeroeumas/paradigmas-de-programacao-845ecf7b4aaf)
 
-### Contatos da prô
-
-- [LinkedIn](https://www.linkedin.com/in/luarakerlen/)
-- [Github](https://github.com/luarakerlen)
-- [Instagram](https://www.instagram.com/luaratech/) -->
-
 ---
-[Voltar para o início](https://www.linkedin.com/in/luarakerlen/)
+[Voltar para o início](https://github.com/reprograma/on25-IJS-orientacao-objetos-I/blob/master/README.md)
 
 <p align="center">
   Desenvolvido com &#128156

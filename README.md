@@ -34,14 +34,14 @@ O que veremos na aula de hoje?
   - [Recapitulando](#recapitulando)
     - [ES6 Instantiation](#es6-instantiation)
   
-  - [Paradigmas de programação](#paradigmas-de-programação)
+  - [Paradigmas de programação](#https://github.com/reprograma/on25-IJS-orientacao-objetos-I/blob/master/05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
   - [Programação Orientada a Objetos](#mudar)
   - [Pilares de OO - Abstração](#mudar)
   - [Pilares de OO - Encapsulamento](#mudar)
 
-- [Exercícios](#exercícios)
+<!-- - [Exercícios](#exercícios)
 - [Material da aula](#material-da-aula)
-- [Links Úteis](#links-úteis)
+- [Links Úteis](#links-úteis) -->
 - [Contatos](#contatos)
 
 # Conteúdo
@@ -50,18 +50,17 @@ O que veremos na aula de hoje?
 ### ES6 Instantiation
 
 
-### Exercícios
+<!-- ### Exercícios
 
 - [Exercício para sala](/exercicios/para-sala/)
 - [Exercício para casa](/exercicios/para-casa/)
 
-<!-- ### Material da aula
+### Material da aula
 
 - [Material](/material)
 
 ### Links Úteis
-- [Geek Hunter - Quais são os paradigmas de programação mais importantes?](https://blog.geekhunter.com.br/quais-sao-os-paradigmas-de-programacao/)
-- [Medium - Paradigmas de Programação](https://medium.com/zeroeumas/paradigmas-de-programacao-845ecf7b4aaf) -->
+- [Geek Hunter - Quais são os paradigmas de programação mais importantes?](https://blog.geekhunter.com.br/quais-sao-os-paradigmas-de-programacao/) -->
 
 ### Contatos da prô
 
