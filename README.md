@@ -34,7 +34,7 @@ O que veremos na aula de hoje?
   - [Recapitulando](#recapitulando)
     - [ES6 Instantiation](#es6-instantiation)
   
-  - [Paradigmas de programação](#https://github.com/reprograma/on25-IJS-orientacao-objetos-I/blob/master/05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
+  - [Paradigmas de programação](https://github.com/reprograma/on25-IJS-orientacao-objetos-I/blob/master/05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
   - [Programação Orientada a Objetos](#mudar)
   - [Pilares de OO - Abstração](#mudar)
   - [Pilares de OO - Encapsulamento](#mudar)
@@ -48,7 +48,40 @@ O que veremos na aula de hoje?
 
 ## Recapitulando...
 ### ES6 Instantiation
+ES6 é um encurtamento de ECMAScript 6. A `ES6 Instantiation` utiliza a palavra-chave `class` ao invés de criar uma função regular. A classe então se torna uma função construtora quando criamos o `constructor` dentro dela.
 
+Os métodos para o objeto também são implementados dentro do escopo da classe:
+
+```javascript
+class Animal {
+	constructor(type, name, age) {
+		this.type = type;
+		this.name = name;
+		this.age = age;
+		this.energy = 0;
+	}
+
+	eat() {
+		console.log(`O ${this.type} chamado ${this.name} está comendo`);
+	}
+
+	sleep(hours) {
+		console.log(`O ${this.type} chamado ${this.name} está dormindo`);
+		this.energy += hours;
+		console.log(`Energia atual: ${this.energy}`);
+	}
+}
+
+const animal1 = new Animal('cachorro', 'Aslam', 3);
+console.log(animal1);
+```
+
+Spoiler: quando escrevemos nosso programa dessa maneira, estamos utilizando a **Programação Orientada a Objetos**. Dá pra perceber desde já o porquê ela leva esse nome, né? Estamos tratando, desde o início, de objetos e de maneiras de criá-los e modificá-los.
+
+## [Paradigmas de programação](https://github.com/reprograma/on25-IJS-orientacao-objetos-I/blob/master/05.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/Paradigmas%20de%20programa%C3%A7%C3%A3o.md)
+## [Programação Orientada a Objetos](#mudar)
+## [Pilares de OO - Abstração](#mudar)
+## [Pilares de OO - Encapsulamento](#mudar)
 
 <!-- ### Exercícios
 
