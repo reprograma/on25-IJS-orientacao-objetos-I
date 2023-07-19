@@ -40,10 +40,9 @@ O que veremos na aula de hoje?
   - [Pilares de OO - Abstração](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.3%20-%20Abstra%C3%A7%C3%A3o.md)
   - [Pilares de OO - Encapsulamento](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.4%20-%20Encapsulamento.md)
 
-<!-- - [Exercícios](#exercícios)
+- [Exercícios](#exercícios)
 - [Material da aula](#material-da-aula)
-- [Links Úteis](#links-úteis) -->
-
+<!-- - [Links Úteis](#links-úteis) -->
 - [Contatos](#contatos)
 
 # Conteúdo
@@ -58,35 +57,26 @@ Os métodos para o objeto também são implementados dentro do escopo da classe:
 
 ```javascript
 class Animal {
-	type;
-	name;
-	age;
-	energy;
-
-	constructor(type, name, age) {
-		this.type = type;
-		this.name = name;
-		this.age = age;
-		this.energy = 0;
-	}
-
-	eat() {
-		console.log(`O ${this.type} chamado ${this.name} está comendo`);
-	}
-
-	sleep(hours) {
-		console.log(`O ${this.type} chamado ${this.name} está dormindo`);
-		this.energy += hours;
-		console.log(`Energia atual: ${this.energy}`);
-	}
-}
-
-class Funcionário {
-	name;
   type;
-  
-  constructor(name) {
+  name;
+  age;
+  energy;
+
+  constructor(type, name, age) {
+    this.type = type;
     this.name = name;
+    this.age = age;
+    this.energy = 0;
+  }
+
+  eat() {
+    console.log(`O ${this.type} chamado ${this.name} está comendo`);
+  }
+
+  sleep(hours) {
+    console.log(`O ${this.type} chamado ${this.name} está dormindo`);
+    this.energy += hours;
+    console.log(`Energia atual: ${this.energy}`);
   }
 }
 
@@ -104,16 +94,16 @@ Spoiler: quando escrevemos nosso programa dessa maneira, estamos utilizando a **
 
 ## [Pilares de OO - Encapsulamento](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.4%20-%20Encapsulamento.md)
 
-<!-- ### Exercícios
+### Exercícios
 
-- [Exercício para sala](/exercicios/para-sala/)
-- [Exercício para casa](/exercicios/para-casa/)
+- [Exercício para sala](./Exerc%C3%ADcios/Para%20sala/)
+- [Exercício para casa](./Exerc%C3%ADcios/Para%20casa/)
 
 ### Material da aula
 
-- [Material](/material)
+- [Material](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/)
 
-### Links Úteis
+<!-- ### Links Úteis
 - [Geek Hunter - Quais são os paradigmas de programação mais importantes?](https://blog.geekhunter.com.br/quais-sao-os-paradigmas-de-programacao/) -->
 
 ### Contatos da prô
