@@ -5,7 +5,7 @@
 
 ## Exercício 7
 
-Modifique a classe `Account`, criada no exercício 2, conforme o diagrama de classe abaixo:
+Modifique a classe `Account`, criada no exercício 3, conforme o diagrama de classe abaixo:
 
 <div style="text-align:center;">
   <img src="https://github.com/reprograma/on25-IJS-orientacao-objetos-I/assets/26902816/72ffbe7a-8af6-42d5-90f7-f62284808858" />

@@ -8,9 +8,9 @@
 Defina uma classe chamada `Account`.
 
 A conta deve ser instanciada com:
-- [ ] Número da conta
-- [ ] Número da agência
-- [ ] Um montante inicial que deve ser diferente de zero
+- [ ] id
+- [ ] name
+- [ ] balance (saldo inicial)
 
 Os métodos de `Account` são:
 - [ ] `credit(amount)`, que adiciona o valor especificado ao montante. Imprime na console o resultado.
