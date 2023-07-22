@@ -1,22 +1,22 @@
 class Account {
 	id;
 	name;
-	balance;
+	#balance;
 
 	constructor(id, name, balance) {
 		this.id = id;
 		this.name = name;
-		this.balance = balance;
+		this.#balance = balance;
 	}
 
 	credit(amount) {
-		this.balance += amount;
-		console.log(`O saldo atualizado é de R$ ${this.balance}`);
+		this.#balance += amount;
+		// console.log(`O saldo atualizado é de R$ ${this.balance}`); // O ideal é ter um método próprio, apenas para consultar o saldo, pensando no encapsulamento
 	}
 
 	debit(amount) {
-		this.balance -= amount;
-		console.log(`O saldo atualizado é de R$ ${this.balance}`);
+		this.#balance -= amount;
+		// console.log(`O saldo atualizado é de R$ ${this.balance}`);
 	}
 
 	transferTo(anotherAccount, amount) {
@@ -25,7 +25,7 @@ class Account {
 			return;
 		}
 
-		if (this.balance < amount) {
+		if (this.#balance < amount) {
 			console.log(
 				`Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${this.balance}`
 			);
@@ -35,7 +35,8 @@ class Account {
 		this.debit(amount);
 		anotherAccount.credit(amount);
 		console.log(
-			`Transferência realizada com sucesso! O seu saldo atual é de R$ ${this.balance} e o saldo da conta destino é de R$ ${anotherAccount.balance}`
+			`Transferência realizada com sucesso! O seu saldo atual é de R$ ${this.balance} e o saldo da conta destino é de R$ ${anotherAccount.balance}` 
+			// vai dar undefined nos dois ${} no console.log
 		);
 	}
 }
