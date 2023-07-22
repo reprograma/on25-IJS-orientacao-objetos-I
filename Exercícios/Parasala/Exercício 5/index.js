@@ -52,13 +52,13 @@ class Employee{
 }
 
 const employee1 = new Employee(1, "Brena", "O'Dwyer", 3000)
-console.log(employee1) // retorna Employee {} porque todos os atributos são privados
+console.log(employee1) // retorna "Employee {}"" porque todos os atributos são privados
 console.log(employee1.id) // 1
 console.log(employee1.firstName) // Brena
 console.log(employee1.secondName) // O'Dwyer
 console.log(employee1.name) // Brena O'Dwyer
-console.log(employee1.salary) // 3000 aqui é get salary 
+console.log(employee1.salary) // 3000 -> aqui é get salary 
 employee1.salary = 4000 // aqui estamos usando o set salary porque estamos passando um valor
-console.log(employee1.salary) // 4000 aqui é o get salary 
+console.log(employee1.salary) // 4000 -> aqui é o get salary 
 console.log(employee1.annualSalary) // 48000
 console.log(employee1.showEmployee()) // id: 1, name: Brena O'Dwyer, salary 4000 -> esse é um método, visto como método e não como get então precisa do ()//
