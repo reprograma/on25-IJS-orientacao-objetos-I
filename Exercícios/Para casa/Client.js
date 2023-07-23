@@ -1,5 +1,4 @@
-import { Bank } from "./entregas/Doria-fernandes/Bank";
-// import { BankAccount } from "./entregas/Doria-fernandes/BankAccount";
+const { Bank, caixa } = require("./entregas/Doria-fernandes/Bank");
 
 class Client {
     name;
@@ -17,13 +16,13 @@ class Client {
 
     addBank(bank) {
         if (!(bank instanceof Bank)) {
-            return 'Informe um Banco válido';
-        } if (bank == banks) {
-            return 'Este cliente já possui vínculo a este banco';
-        } else {
-            this.banks.unshift(bank)
-
-            return "Cliente vínculado com sucesso";
+            return console.log('Informe um Banco válido');
+        } if ((this.banks.includes(bank.bankName)) == true) {
+            return console.log('Este cliente já possui vínculo a este banco');
+        }
+        else {
+            this.banks.unshift(bank.bankName)
+            return console.log("Cliente vínculado com sucesso");
         }
     }
 
@@ -35,6 +34,13 @@ class Client {
 
 }
 
+const doria = new Client("Dória", "1234");
+console.log(doria)
+
+doria.addBank(caixa)
+console.log(doria)
+doria.addBank(bradesco)
+doria.addBank(caixa)
 
 
-export { Client }
+module.export = { Client };

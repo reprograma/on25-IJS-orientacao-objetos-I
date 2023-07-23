@@ -2,13 +2,14 @@ class Bank {
     bankCode;
     bankName;
     #transferTax;
+    qtdClients = 0;
     static createdBanks = [];
     constructor(bankCode, bankName, transferTax) {
         this.#transferTax = transferTax;
         this.bankCode = bankCode;
         this.bankName = bankName;
 
-        Bank.createdBanks.unshift(`bankCod: ${[this.bankCode]} qtdClients: ${[0]}`);
+        Bank.createdBanks.unshift(`bankCod: ${[this.bankCode]} qtdClients: ${[this.qtdClients]}`);
     }
 
     get transferTax() {
@@ -21,13 +22,13 @@ class Bank {
 
 console.log(Bank.createdBanks) // []
 
-let caixa = new Bank(104, "Caixa", 1.04)
-let bradesco = new Bank(237, "Bradesco", 1.20)
-let itau = new Bank(341, "Itaú", 0.89)
-let pagBank = new Bank(290, "PagBank", 1.00)
-let nuBank = new Bank(260, "NuBank", 0.90)
-let bb = new Bank(001, "Banco do Brasil", 0.67)
-let santander = new Bank(33, "Santander", 1.15)
+const caixa = new Bank(104, "Caixa", 1.04)
+const bradesco = new Bank(237, "Bradesco", 1.20)
+const itau = new Bank(341, "Itaú", 0.89)
+const pagBank = new Bank(290, "PagBank", 1.00)
+const nuBank = new Bank(260, "NuBank", 0.90)
+const bb = new Bank(001, "Banco do Brasil", 0.67)
+const santander = new Bank(33, "Santander", 1.15)
 
 console.log(caixa) // Bank { bankCode: 104, bankName: 'Caixa'}
 console.log(caixa.bankCode);
@@ -46,4 +47,4 @@ console.log(santander) // Bank { bankCode: 33, bankName: 'Santander' }
 console.log(Bank.createdBanks)
 
 
-module.export = { Bank };
+module.export = { Bank, caixa };
