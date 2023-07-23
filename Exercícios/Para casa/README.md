@@ -108,16 +108,17 @@ A conta deve possuir as seguintes propriedades:
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
-  - Deve ser inicializado com 0.
-  - Deve ser um parâmetro privado.
-  - Deve ter um método get.
-
-- [ ] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
-  - Cada conta tem direito a realizar X (você define) retiradas gratuitas. Após isso, essa taxa começa a ser cobrada em cada retirada.
-  - Deve ser inicializada com algum valor (exemplo: 0.03).
-  - Deve ser um parâmetro privado.
-  - Deve ter um método get e um método set.
+**A SER IMPLEMENTADO APENAS NA SEMANA 6:**
+> - [ ] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
+>   - Deve ser inicializado com 0.
+>   - Deve ser um parâmetro privado.
+>   - Deve ter um método get.
+> 
+> - [ ] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
+>   - Cada conta tem direito a realizar X (você define) retiradas gratuitas. Após isso, essa taxa começa a ser cobrada em cada retirada.
+>   - Deve ser inicializada com algum valor (exemplo: 0.03).
+>   - Deve ser um parâmetro privado.
+>   - Deve ter um método get e um método set.
 
 A classe `BankAccount` possui os seguintes métodos:
 - [ ] `credit(amount)`: adiciona o valor especificado ao montante.
@@ -132,17 +133,18 @@ A classe `BankAccount` possui os seguintes métodos:
   - Caso a transferência seja para um banco diferente do cliente que está realizando, utilize a taxa do banco de origem.
   - Imprima na console o resultado.
 
-- [ ] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
-  - Caso a quantidade de retiradas tenha ultrapassado o limite, a taxa deve ser cobrada.
-  - A cada retirada realizada, informe ao cliente quantas retiradas ele já realizou e se ainda possui retiradas gratuitas.
-    - Se sim, informe quantas.
-    - Se não, informe a taxa que será cobrada a cada retirada.
-  - Caso não haja valor suficiente para a operação, ela deve retornar uma mensagem para o usuário.
-  - Imprima na console o resultado.
-
 - [ ] `closeAccount()`: encerra a conta.
   - Caso a conta possua saldo não é possível encerrá-la.
   - Imprima na console o resultado.
+
+**A SER IMPLEMENTADO APENAS NA SEMANA 6:**
+> - [ ] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
+>   - Caso a quantidade de retiradas tenha ultrapassado o limite, a taxa deve ser cobrada.
+>   - A cada retirada realizada, informe ao cliente quantas retiradas ele já realizou e se ainda possui retiradas gratuitas.
+>     - Se sim, informe quantas.
+>    - Se não, informe a taxa que será cobrada a cada retirada.
+>  - Caso não haja valor suficiente para a operação, ela deve retornar uma mensagem para o usuário.
+>  - Imprima na console o resultado.
 
 Exemplo:
 ```javascript
