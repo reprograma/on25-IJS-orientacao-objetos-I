@@ -79,12 +79,18 @@ class BankAccount {
         if (this.#qtdWithdrawal > 2 && amount <= this.#balance) {
             debit(amount);
             this.#qtdWithdrawal += 1;
-            return console.log(`Foi cobrado uma taxa de ${Bank.transferTax}, sacou o valor de ${amount - Bank.transferTax}. Você realizou ${this.#qtdWithdrawal} saque(s)`)
+            return console.log(`Foi cobrado uma taxa de ${Bank.transferTax}, sacou o valor de ${amount - Bank.transferTax}. Você realizou ${this.#qtdWithdrawal} saque(s). Você não possui mais nenhuma retirada gratuita.`)
         }
-        if (this.#qtdWithdrawal < 2 && amount <= this.#balance) {
+        if (this.#qtdWithdrawal == 1 && amount <= this.#balance) {
             debit(amount);
             withdrawalTax(1);
-            return console.log(`Sacou o valor de ${amount - Bank.transferTax}. Você realizou ${this.#qtdWithdrawal} saque(s). Lhe resta  saque(s) gratuítos`)
+            return console.log(`Sacou o valor de ${amount - Bank.transferTax}. Você realizou ${this.#qtdWithdrawal} saque(s). Você não possui mais nenhuma retirada gratuita.`)
+        } if (this.#qtdWithdrawal == 0 && amount <= this.#balance) {
+            debit(amount);
+            withdrawalTax(1);
+            return console.log(`As primeiras 2 retiradas são gratuitas. Retirada realizada com sucesso. O saldo atual é de R$${this.#balance}. Total de retiradas realizadas: ${this.#qtdWithdrawal}. Você ainda possui 1 retirada gratuita`);
+        } if (amount > this.#balance) {
+            return console.log(`Você não possui saldo o suficiente`)
         }
     }
 

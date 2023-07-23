@@ -4,7 +4,7 @@ import { Bank } from "./entregas/Doria-fernandes/Bank";
 class Client {
     name;
     #cpf;
-    banks;
+    banks = [];
 
     constructor(name, cpf) {
         this.name = name;
@@ -18,8 +18,12 @@ class Client {
     addBank(bank) {
         if (!(bank instanceof Bank)) {
             return 'Informe um Banco válido';
-        } if (bank) {
-            return 'Este cliente já possui vínculo a este banco'
+        } if (bank == banks) {
+            return 'Este cliente já possui vínculo a este banco';
+        } else {
+            this.banks.unshift(bank)
+
+            return "Cliente vínculado com sucesso";
         }
     }
 
