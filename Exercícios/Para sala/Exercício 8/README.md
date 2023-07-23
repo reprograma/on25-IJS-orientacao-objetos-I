@@ -39,10 +39,10 @@ class Animal {
     console.log(`Energia atual: ${this.energy}.`);
   }
 
-  static updateAnimalsHungry(name, hungry) {
+  static updateAnimalsHungry(name, updatedHungry) {
     this.animals = this.animals.map((animal) => {
       if (animal.name === name) {
-        const updatedAnimal = { name, hungry };
+        const updatedAnimal = { name, hungry: updatedHungry };
         return updatedAnimal;
       } else {
         return animal;
