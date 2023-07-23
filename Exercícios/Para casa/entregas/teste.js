@@ -2,12 +2,13 @@ class Bank {
     bankCode;
     bankName;
     #transferTax;
-    qtdClients = 0;
+    qtdClients;
     static createdBanks = [];
     constructor(bankCode, bankName, transferTax) {
         this.#transferTax = transferTax;
         this.bankCode = bankCode;
         this.bankName = bankName;
+        this.qtdClients = 0;
 
         Bank.createdBanks.unshift(`bankCod: ${[this.bankCode]} qtdClients: ${[this.qtdClients]}`);
     }
@@ -68,6 +69,8 @@ class Client {
         }
         else {
             this.banks.unshift(bank.bankName)
+            bank.qtdClients += 1;
+            console.log(bank.qtdClients)
             return console.log("Cliente vínculado com sucesso");
         }
     }
@@ -75,18 +78,36 @@ class Client {
     removeBank(bank) {
         if (!(bank instanceof Bank)) {
             return console.log('Informe um Banco válido');
+        } if ((this.banks.includes(bank.bankName)) == true) {
+            bank.qtdClients -= 1;
+            let index = this.banks.indexOf(bank.bankName);
+            this.banks.splice(index, 1);
+            return console.log('Banco desvinculado com sucesso');
+        } else {
+            return console.log("Esse banco não está vinculado")
         }
     }
 
 }
 
+
+
 const doria = new Client("Dória", "1234");
+const dhilly = new Client("Dhilly", "2345");
 console.log(doria)
+console.log(doria.cpf)
 
 doria.addBank(caixa)
 console.log(doria)
 doria.addBank(bradesco)
 doria.addBank(caixa)
+dhilly.addBank(caixa)
+console.log(caixa.qtdClients)
+
+doria.removeBank(caixa)
+console.log(doria)
+
+console.log(caixa.qtdClients)
 
 
 
@@ -182,4 +203,4 @@ class BankAccount {
         }
     }
 
-}
+} 
