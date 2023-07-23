@@ -1,4 +1,5 @@
 import { Bank } from "./entregas/Doria-fernandes/Bank";
+// import { BankAccount } from "./entregas/Doria-fernandes/BankAccount";
 
 class Client {
     name;
@@ -27,6 +28,7 @@ class Client {
             return 'Informe um Banco válido';
         }
     }
+
 }
 
 
