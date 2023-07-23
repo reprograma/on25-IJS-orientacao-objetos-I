@@ -36,3 +36,5 @@ console.log(pagBank) // Bank { bankCode: 290, bankName: 'PagBank' }
 console.log(nuBank) // Bank { bankCode: 260, bankName: 'NuBank' }
 console.log(bb) // Bank { bankCode: 1, bankName: 'Banco do Brasil' }
 console.log(santander) // Bank { bankCode: 33, bankName: 'Santander' }
+
+export { Bank }
