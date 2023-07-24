@@ -149,12 +149,12 @@ class BankAccount {
 
     credit(amount) {
         this.#balance += amount;
-        console.log(`O saldo atualizado é de R$ ${balance}`);
+        console.log(`O saldo atualizado é de R$ ${this.#balance}`);
     }
 
     debit(amount) {
         this.#balance -= amount;
-        console.log(`O saldo atualizado é de R$ ${balance}`);
+        console.log(`O saldo atualizado é de R$ ${this.#balance}`);
     }
 
     transferTo(anotherAccount, amount) {
@@ -203,4 +203,14 @@ class BankAccount {
         }
     }
 
-} 
+}
+
+conta1 = new BankAccount(doria, bradesco, 5678, 4567)
+conta2 = new BankAccount(dhilly, caixa, 9087, 5006)
+console.log(conta1)
+
+conta1.credit(500)
+
+conta1.transferTo(conta2, )
+
+//conta1.debit(200)
