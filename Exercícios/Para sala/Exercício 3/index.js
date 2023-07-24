@@ -10,17 +10,20 @@ class Account {
   }
 
   credit(amount) {
-    this.balance = this.balance + amount
+    this.balance += amount
     console.log(`New balance: ${this.balance}`)
   }
 
   debit(amount) {
-    this.balance = this.balance - amount
+    this.balance -= amount
     console.log(`New balance: ${this.balance}`)
   }
 
   transferTo(anotherAccount, amount) {
-    if(this.balance < amount) {
+    if(!(anotherAccount instanceof Account)) {
+      console.log("Invalid account")
+      return
+    }else if(this.balance < amount) {
       console.log("Insufficient balance account")
     } else {
       this.debit(amount)
