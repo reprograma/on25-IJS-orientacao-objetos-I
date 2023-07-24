@@ -25,3 +25,10 @@ console.log(laissa);
 console.log(laissa.transferTax)
 laissa.transferTax = 0.06;
 console.log(laissa.transferTax)
+
+//  createdBanks: Bancos criados
+
+// Propriedade estática, sendo ela uma array de objetos que é inicialmente vazia e é atualizada a cada vez que um novo banco é criado, contendo:
+// Código do banco criado
+// Quantidade de clientes que esse banco possui
+// Esse valor deve ser inicializado com 0 e aumentar a medida que um cliente é associado a esse banco.
