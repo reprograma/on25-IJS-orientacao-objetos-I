@@ -133,7 +133,7 @@ class BankAccount {
     }
     this.debit(amount);
     anotherAccount.#balance += amount;
-    console.log(`Transferencia de R$ ${amount},00.`);
+    console.log(`Transferência de R$ ${amount},00 realizada.`);
   }
   closeAccount() {
     if (this.#balance === 0) {
@@ -174,7 +174,7 @@ bankAccount1.credit(1000); //Operação realizada, o saldo é de: R$ 1000,00.
 bankAccount1.debit(300); //Operação realizada, o saldo é de: R$ 700,00.
 bankAccount1.transferTo(bankAccount2, 200);
 // Operação realizada, seu saldo é de: R$ 500,00.
-// Transferencia de R$ 200,00.
+// Transferência de R$ 200,00 realizada.
 
 bankAccount2.closeAccount(); //Não é possível encerrar a conta. A conta possui saldo.
 bankAccount2.debit(200); // Operação realizada, seu saldo é de: R$ 0,00.
