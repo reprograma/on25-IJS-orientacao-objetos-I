@@ -67,17 +67,21 @@ class Client {
       console.log(
         `Primeiro associe o banco ${bank.bankCode} ao cliente ${this.name}, para remove-lo.`
       );
-    }
-    console.log(`Banco ${bank.bankCode} removido do(a) cliente ${this.name}.`);
-    //Encontra o bank no array, e cria outro array sem o "bank"
-    this.banks = this.banks.filter((item) => item !== bank);
+      return;
+    } else {
+      console.log(
+        `Banco ${bank.bankCode} removido do(a) cliente ${this.name}.`
+      );
+      //Encontra o bank no array, e cria outro array sem o "bank"
+      this.banks = this.banks.filter((item) => item !== bank);
 
-    //Encontrar o banco no array createdBanks e incrementar +1 a qntClients
-    const bankInfo = Bank.createdBanks.find(
-      (item) => item.bankCode === bank.bankCode
-    );
-    if (bankInfo) {
-      bankInfo.qndClients--;
+      //Encontrar o banco no array createdBanks e incrementar +1 a qntClients
+      const bankInfo = Bank.createdBanks.find(
+        (item) => item.bankCode === bank.bankCode
+      );
+      if (bankInfo) {
+        bankInfo.qndClients--;
+      }
     }
   }
 }
@@ -100,7 +104,7 @@ class BankAccount {
       );
     }
     if (!client.banks.includes(bank)) {
-      return console.log("O cliente não é cliente desse banco");
+      return console.log(`${client.name} não é cliente desse banco`);
     }
     this.client = client;
     this.bank = bank;
@@ -138,15 +142,13 @@ class BankAccount {
   closeAccount() {
     if (this.#balance === 0) {
       console.log("Conta encerrada!");
-      this.client = undefined;
-      this.bank = undefined;
-      this.accountNumber = undefined;
-      this.agencyNumber = undefined;
+      Object.keys(this).forEach((key) => (this[key] = undefined));
     } else {
       console.log("Não é possível encerrar a conta. A conta possui saldo.");
     }
   }
 }
+
 
 console.log(Bank.createdBanks); // [ ]
 const bank1 = new Bank(100, "LuaBank", 0.01);
@@ -188,3 +190,4 @@ console.log(bankAccount2);
   agencyNumber: undefined
 }
  */
+console.log(Bank.createdBanks); //[ { bankCode: 100, qndClients: 2 } ]
