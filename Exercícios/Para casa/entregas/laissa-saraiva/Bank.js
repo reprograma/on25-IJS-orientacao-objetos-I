@@ -1,34 +1,35 @@
 class Bank {
-  bankcode;
+  bankCode;
   bankName;
   #transferTax;
-  // createdBanks;
+  
+  static createdBanks = []
 
-  constructor(bankcode, bankName, transferTax) {
-    this.bankcode = bankcode;
+  constructor(bankCode, bankName, transferTax) {
+    this.bankCode = bankCode;
     this.bankName = bankName;
     this.#transferTax = transferTax;
+    this.constructor.createdBanks.push;
+    this.qtdClient = 0;
+    ({bankCode: this.bankCode, qtdClientes: this.qtdClient })
   }
 
   get transferTax() {
     return this.#transferTax
   }
-
+  
   set transferTax(newTax) {
     return this.#transferTax = newTax;
   }
 }
 
-const laissa = new Bank( 123 , "NuBank", 0.05);
+const laissaBank = new Bank( 123 , "laissaBank", 0.05);
+const devBank = new Bank( 456, "DevBank", 0.08) 
+console.log(laissaBank);
+console.log(laissaBank.transferTax)
+laissaBank.transferTax = 0.06;
+console.log(laissaBank.transferTax)
 
-console.log(laissa);
-console.log(laissa.transferTax)
-laissa.transferTax = 0.06;
-console.log(laissa.transferTax)
+console.log(Bank.createdBanks)
 
-//  createdBanks: Bancos criados
-
-// Propriedade estática, sendo ela uma array de objetos que é inicialmente vazia e é atualizada a cada vez que um novo banco é criado, contendo:
-// Código do banco criado
-// Quantidade de clientes que esse banco possui
-// Esse valor deve ser inicializado com 0 e aumentar a medida que um cliente é associado a esse banco.
+module.exports = {Bank};
