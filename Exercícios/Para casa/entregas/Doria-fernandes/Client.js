@@ -1,4 +1,4 @@
-const { Bank, caixa } = require("./Bank");
+const { Bank } = require('./Bank');
 
 class Client {
     name;
@@ -23,8 +23,7 @@ class Client {
         else {
             this.banks.unshift(bank.bankName)
             bank.qtdClients += 1;
-            console.log(bank.qtdClients)
-            return console.log("Cliente vínculado com sucesso");
+            return console.log(`Cliente vínculado com sucesso. Quantidade atual de clientes é de ${bank.qtdClients}`);
         }
     }
 
@@ -45,19 +44,4 @@ class Client {
 
 
 
-const doria = new Client("Dória", "1234");
-const dhilly = new Client("Dhilly", "2345");
-console.log(doria)
-console.log(doria.cpf)
-
-doria.addBank(caixa)
-console.log(doria)
-doria.addBank(bradesco)
-doria.addBank(caixa)
-dhilly.addBank(caixa)
-console.log(caixa.qtdClients)
-
-doria.removeBank(caixa)
-console.log(doria)
-
-console.log(caixa.qtdClients)
+module.exports = { Client };
