@@ -22,7 +22,6 @@ class Bank {
   }
 }
 
-// Instanciação de um objeto Bank.
 //console.log(bank1); // { bankCode: 100, bankName: 'LuaBank' }
 //console.log(Bank.createdBanks); // [ { bankCode: 100, qtdClients: 0 } ]
 //console.log(bank1.transferTax);
@@ -85,7 +84,59 @@ class BankAccount {
   get balance() {
     return this.#balance;
   }
+
+  credit(amount) {
+    this.#balance += amount;
+    console.log(`O saldo atualizado é de R$ ${this.#balance}`);
+  }
+
+  debit(amount) {
+    this.#balance -= amount;
+    console.log(`O saldo atualizado é de R$ ${this.#balance}`);
+  }
+
+  transferTo(anotherAccount, amount) {
+    if (!(anotherAccount instanceof BankAccount)) {
+      console.log("Informe uma conta válida!");
+      return;
+    }
+
+    if (this.#balance < amount) {
+      console.log(
+        `Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${
+          this.#balance
+        }`
+      );
+      return;
+    }
+
+    this.debit(amount);
+    anotherAccount.credit(amount);
+    console.log(
+      `Transferência realizada com sucesso! O seu saldo atual é de R$ ${this.balance} e o saldo da conta destino é de R$ ${anotherAccount.balance}`
+    );
+  }
+  closeAccount() {
+    this.client = null;
+    this.accountNumber = null;
+    this.agencyNumber = null;
+    this.Bank = null;
+    console.log("Conta encerrada com sucesso.");
+  }
 }
 
 const contaLua = new BankAccount("Lua", "LuaBank", 123, 456);
 console.log(contaLua);
+
+const bankAccount1 = new BankAccount(client1, bank1, 1111, 2222); // Instanciação de um objeto BankAccount.
+const bankAccount2 = new BankAccount("client2", "bank2", 3333, 4444, 0);
+console.log(bankAccount1);
+
+bankAccount1.credit(1000);
+//O saldo atualizado é de R$ 1000
+bankAccount1.debit(300);
+//O saldo atualizado é de R$ 700
+bankAccount1.transferTo(bankAccount2, 200);
+//Transferência realizada com sucesso! O seu saldo atual é de R$ 500 e o saldo da conta destino é de R$ 200
+bankAccount1.closeAccount();
+// Conta encerrada
