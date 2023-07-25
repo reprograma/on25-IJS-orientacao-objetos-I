@@ -1,4 +1,4 @@
-const { Bank, caixa } = require("./entregas/Doria-fernandes/Bank");
+const { Bank, caixa } = require("./Bank");
 
 class Client {
     name;
@@ -22,25 +22,42 @@ class Client {
         }
         else {
             this.banks.unshift(bank.bankName)
+            bank.qtdClients += 1;
+            console.log(bank.qtdClients)
             return console.log("Cliente vínculado com sucesso");
         }
     }
 
     removeBank(bank) {
         if (!(bank instanceof Bank)) {
-            return 'Informe um Banco válido';
+            return console.log('Informe um Banco válido');
+        } if ((this.banks.includes(bank.bankName)) == true) {
+            bank.qtdClients -= 1;
+            let index = this.banks.indexOf(bank.bankName);
+            this.banks.splice(index, 1);
+            return console.log('Banco desvinculado com sucesso');
+        } else {
+            return console.log("Esse banco não está vinculado")
         }
     }
 
 }
 
+
+
 const doria = new Client("Dória", "1234");
+const dhilly = new Client("Dhilly", "2345");
 console.log(doria)
+console.log(doria.cpf)
 
 doria.addBank(caixa)
 console.log(doria)
 doria.addBank(bradesco)
 doria.addBank(caixa)
+dhilly.addBank(caixa)
+console.log(caixa.qtdClients)
 
+doria.removeBank(caixa)
+console.log(doria)
 
-module.export = { Client };
+console.log(caixa.qtdClients)
