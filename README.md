@@ -39,6 +39,7 @@ O que veremos na aula de hoje?
   - [Programação Orientada a Objetos](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.2%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
   - [Pilares de OO - Abstração](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.3%20-%20Abstra%C3%A7%C3%A3o.md)
   - [Pilares de OO - Encapsulamento](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I//5.4%20-%20Encapsulamento.md)
+  - [Métodos e propriedades estáticas (extra)](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.5%20-%20Static%20(extra).md)
 
 - [Exercícios](#exercícios)
 - [Material da aula](#material-da-aula)
