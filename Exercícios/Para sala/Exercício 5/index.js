@@ -1,24 +1,70 @@
-class Income {
-  balance;
-  interestRate;
+class Employee {
+	#id;
+	#firstName;
+	#lastName;
+	#salary;
 
-  constructor(initialBalance, interestRate) {
-    this.balance = initialBalance;
-    this.interestRate = interestRate;
-  }
+	constructor(id, firstName, lastName, salary) {
+		this.#id = id;
+		this.#firstName = firstName;
+		this.#lastName = lastName;
+		this.#salary = salary;
+	}
 
-  printBalance() {
-    console.log(`Saldo atual R$ ${this.balance}`);
-  }
+	get id() {
+		return this.#id;
+	}
 
-  calculateIncome() {
-    const income = this.balance * this.interestRate;
-    console.log(`O rendimento atual é R$ ${income}`);
-  }
+	get firstName() {
+		return this.#firstName;
+	}
+
+	get lastName() {
+		return this.#lastName;
+	}
+
+	get name() {
+		return `${this.#firstName} ${this.#lastName}`;
+	}
+
+	get salary() {
+		return this.#salary;
+	}
+
+	set salary(newSalary) {
+		this.#salary = newSalary;
+	}
+
+	get annualSalary() {
+		return this.#salary * 12;
+	}
+
+	raiseSalary(percent) {
+		this.#salary += this.#salary * (percent / 100);
+		console.log(`O novo salário é de ${this.#salary}`);
+	}
+
+	returnEmployee() {
+		const employee = `id: ${this.#id}, name: ${this.name}, salary: ${
+			this.#salary
+		}`;
+		return employee;
+	}
 }
 
-const income1 = new Income(1000, 0.5);
-income1.printBalance();
-income1.calculateIncome();
+const employee = new Employee(123, 'Luara', 'Rangel', 5000);
+console.log(employee);
+console.log('id:', employee.id);
+console.log('firstName:', employee.firstName);
+console.log('lastName:', employee.lastName);
+console.log('name:', employee.name);
+console.log('salary:', employee.salary);
+console.log('annualSalary:', employee.annualSalary);
 
-console.log(income1.balance);
+employee.salary = 6000;
+console.log('salary:', employee.salary);
+
+employee.raiseSalary(20);
+console.log('salary:', employee.salary);
+
+console.log('Employee:', employee.toString());

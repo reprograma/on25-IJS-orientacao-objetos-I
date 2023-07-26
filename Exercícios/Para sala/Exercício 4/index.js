@@ -1,25 +1,25 @@
-class Client {
-    #id;
-    name;
-    address;
-    constructor(id, name , address){
-        this.#id = id
-        this.name = name
-        this.address = address
+class Income {
+	balance;
+	interestRate;
 
-    }
+	constructor(initialBalance, interestRate) {
+		this.balance = initialBalance;
+		this.interestRate = interestRate;
+	}
 
-    edit()
-    delete()
+	printBalance() {
+		console.log(`O saldo atual é de R$ ${this.balance}`);
+	}
+
+	calculateIncome() {
+		const income = this.balance * this.interestRate;
+    this.balance += income
+		console.log(`O rendimento atual é de R$ ${income}`);
+	}
 }
 
-class Bank {
-    name;
-    code;
-    Client;
-    constructor(name, code,Client){
-      this.name= name
-      this.code = code
-      this.Client = Client
-    }
-}
+const income1 = new Income(1000, 0.05);
+income1.printBalance()
+income1.calculateIncome()
+
+console.log(income1.balance)

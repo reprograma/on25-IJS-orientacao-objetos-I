@@ -1,22 +1,22 @@
 class Account {
 	id;
 	name;
-	balance;
+	#balance;
 
 	constructor(id, name, balance) {
 		this.id = id;
 		this.name = name;
-		this.balance = balance;
+		this.#balance = balance;
 	}
 
 	credit(amount) {
-		this.balance += amount;
-		console.log(`O saldo atualizado é de R$ ${this.balance}`);
+		this.#balance += amount;
+		// console.log(`O saldo atualizado é de R$ ${this.#balance}`);
 	}
 
 	debit(amount) {
-		this.balance -= amount;
-		console.log(`O saldo atualizado é de R$ ${this.balance}`);
+		this.#balance -= amount;
+		// console.log(`O saldo atualizado é de R$ ${this.#balance}`);
 	}
 
 	transferTo(anotherAccount, amount) {
@@ -25,9 +25,9 @@ class Account {
 			return;
 		}
 
-		if (this.balance < amount) {
+		if (this.#balance < amount) {
 			console.log(
-				`Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${this.balance}`
+				`Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${this.#balance}`
 			);
 			return;
 		}
@@ -46,3 +46,6 @@ contaDaLuara.debit(300);
 
 const contaDaAle = new Account(456, 'Ale', 50000);
 contaDaLuara.transferTo(contaDaAle, 1000);
+
+console.log(contaDaLuara)
+console.log(contaDaAle)
