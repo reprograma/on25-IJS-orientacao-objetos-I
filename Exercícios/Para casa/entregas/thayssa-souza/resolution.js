@@ -29,6 +29,7 @@ bankAccount2.credit(200);
 bankAccount2.closeAccount(); //erro
 bankAccount2.debit(200);
 bankAccount2.closeAccount();
+console.log(Bank.createdBanks);
 
 const bankAccount3 = new BankAccount(client3, bank2, 9090, 2121);
 bankAccount1.transferTo(bankAccount3, 400);

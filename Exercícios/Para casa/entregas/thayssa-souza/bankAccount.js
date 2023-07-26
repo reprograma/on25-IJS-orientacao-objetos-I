@@ -1,3 +1,5 @@
+const Client = require('./client');
+
 class BankAccount {
     client;
     bank;
@@ -122,6 +124,7 @@ class BankAccount {
             console.log(`Sorry, you cannot close the account until reset the balance. Actual balance: $${this.#balance}`);
             return false;
         } else {
+            this.client.removeBank(this.bank);
             Object.keys(this).forEach(key => this[key] = undefined);
             console.log("Closed account successfully");
         }
