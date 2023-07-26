@@ -9,18 +9,18 @@
 ### Bank
 Defina uma classe para um objeto `Bank`.
 O banco deve possuir as seguintes propriedades:
-- [ ] `bankCode`: Código do banco 🎁
+- [x] `bankCode`: Código do banco 🎁
   - Número do banco, recebido por parâmetro durante a instanciação.
 
-- [ ] `bankName`: Nome do banco 🎁
+- [x] `bankName`: Nome do banco 🎁
   - Recebido por parâmetro durante a instanciação.
 
-- [ ] `transferTax`: Taxa de transferência para outros bancos
+- [x] `transferTax`: Taxa de transferência para outros bancos
   - Recebido por parâmetro durante a instanciação.
   - Deve ser um parâmetro privado.
   - Deve ter um método get e um método set.
 
-- [ ] `createdBanks`: Bancos criados 🎁
+- [x] `createdBanks`: Bancos criados 🎁
   - Propriedade estática, sendo ela uma array de objetos que é inicialmente vazia e é atualizada a cada vez que um novo banco é criado, contendo:
     - `Código do banco criado`
     - `Quantidade de clientes que esse banco possui`
@@ -48,24 +48,24 @@ console.log(bank1.transferTax); // 0.02
 ### Client
 Defina ainda uma classe `Client`.
 A classe deve possuir as seguintes propriedades:
-- [ ] `name`: Nome da pessoa 🎁
+- [x] `name`: Nome da pessoa 🎁
   - Recebido por parâmetro durante a instanciação.
 
-- [ ] `cpf`: CPF
+- [x] `cpf`: CPF
   - Recebido por parâmetro durante a instanciação.
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `banks`: Uma array de bancos ao qual é associada 🎁
+- [x] `banks`: Uma array de bancos ao qual é associada 🎁
   - Deve ser inicializado vazio.
 
 Como métodos da classe `Client`, temos:
-- [ ] `addBank(bank)`: associa um banco a esse cliente.
+- [x] `addBank(bank)`: associa um banco a esse cliente.
   - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
   - Verifique se o cliente já tem esse banco associado a ele. Se tiver, retorne uma mensagem e não adicione novamente.
   - Lembrar de aumentar a quantidade de clientes que esse banco possui. 🎁
 
-- [ ] `removeBank(bank)`: desassocia um banco a esse cliente.
+- [x] `removeBank(bank)`: desassocia um banco a esse cliente.
   - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
   - Verifique se o cliente tem esse banco associado a ele. Se não tiver, retorne uma mensagem e termine a execução da função.
   - Lembrar de diminuir a quantidade de clientes que esse banco possui. 🎁
