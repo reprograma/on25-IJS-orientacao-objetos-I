@@ -88,22 +88,22 @@ console.log(client1); // { name: 'Maria', banks: [] }
 ### BankAccount
 Por fim, defina uma classe para um objeto `BankAccount`.
 A conta deve possuir as seguintes propriedades:
-- [ ] `client`: Cliente a qual essa conta pertence
+- [x] `client`: Cliente a qual essa conta pertence
   - O parâmetro deve obrigatoriamente ser do tipo `Client`.
   - Recebido por parâmetro durante a instanciação.
 
-- [ ] `Bank`: Banco
+- [x] `Bank`: Banco
   - O parâmetro deve obrigatoriamente ser do tipo `Bank`.
   - A conta só pode ser criada caso a pessoa seja cliente desse banco.
   - Recebido por parâmetro durante a instanciação.
 
-- [ ] `accountNumber`: Número da conta
+- [x] `accountNumber`: Número da conta
   - Recebido por parâmetro durante a instanciação.
   
-- [ ] `agencyNumber`: Número da agência bancária
+- [x] `agencyNumber`: Número da agência bancária
   - Recebido por parâmetro durante a instanciação.
   
-- [ ] `balance`: O saldo
+- [x] `balance`: O saldo
   - Deve ser inicializado com 0.
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
