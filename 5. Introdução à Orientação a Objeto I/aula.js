@@ -11,10 +11,13 @@ class Animal{
     }
     sleep(hours) {
         console.log(`O ${this.type} chamado ${this.name} está dormindo`);
-        this.energy + hours;
+        this.energy = this.energy+ hours;
         console.log(`Energia atual: ${this.energy}`);
       }
     }
+
+    const safira = new Animal("Dog", "Safira", 7)
+    console.log(safira)
 
     // abstração - UML
 
