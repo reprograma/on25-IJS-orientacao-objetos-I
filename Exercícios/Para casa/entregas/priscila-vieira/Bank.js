@@ -25,4 +25,4 @@ class Bank {
   }
 }
 
-module.exports = ({ Bank )};
+module.exports = ({ Bank });
