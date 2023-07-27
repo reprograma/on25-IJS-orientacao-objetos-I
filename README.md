@@ -43,7 +43,7 @@ O que veremos na aula de hoje?
 
 - [Exercícios](#exercícios)
 - [Material da aula](#material-da-aula)
-<!-- - [Links Úteis](#links-úteis) -->
+- [Links Úteis](#links-úteis)
 - [Contatos](#contatos)
 
 # Conteúdo
@@ -104,8 +104,9 @@ Spoiler: quando escrevemos nosso programa dessa maneira, estamos utilizando a **
 
 - [Material](./5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/)
 
-<!-- ### Links Úteis
-- [Geek Hunter - Quais são os paradigmas de programação mais importantes?](https://blog.geekhunter.com.br/quais-sao-os-paradigmas-de-programacao/) -->
+### Links Úteis
+- [Javascript.info - Array methods](https://javascript.info/array-methods)
+- [Mozilla - Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ### Contatos da prô
 
