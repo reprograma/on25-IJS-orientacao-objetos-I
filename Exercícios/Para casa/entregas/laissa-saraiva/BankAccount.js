@@ -1,3 +1,6 @@
+const {Bank} = require('./Bank')
+const{Client} = require('./Client')
+
 class BankAccount {
   client;
   bank;
@@ -8,6 +11,15 @@ class BankAccount {
   #withdrawalTax;
 
   constructor(client, bank, accountNumber, agencyNumber) {
+
+    if (!(client instanceof Client)) {
+      throw new Error("Informe um cliente válido.");
+    }
+
+    if (!(bank instanceof Bank)) {
+      throw new Error("Informe um banco válido");
+    }
+
     this.client = client;
     this.bank = bank;
     this.accountNumber = accountNumber;
@@ -71,16 +83,6 @@ class BankAccount {
     }
   }
 
-
 }
 
-const bankAccount1 = new BankAccount("Laíssa", "nubank", 123, 45678-9)
-
-console.log(bankAccount1)
-console.log(bankAccount1.credit(100))
-
-const bankAccount2 = new BankAccount("Lucas", "Nubank", 132, 589657-9)
-bankAccount1.transferTo(bankAccount2, 20);
-
-
-console.log(bankAccount2.closeAccount());
+module.exports = {BankAccount};
