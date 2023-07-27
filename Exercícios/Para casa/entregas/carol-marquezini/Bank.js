@@ -5,7 +5,7 @@ class Bank {
 
     static createdBanks = [];
 
-    constructor(bankCode, bankNome, createdBanks, transferTax) {
+    constructor(bankCode, bankNome, transferTax) {
         this.bankCode = bankCode;
         this.bankNome = bankNome;
         this.constructor.createdBanks.push({
@@ -14,13 +14,24 @@ class Bank {
         })
         this.#transferTax = transferTax;
     }
+
+    get transferTax() {
+        return this.#transferTax;
+    }
+
+    set transferTax(newTransferTaxa){
+
+        return this.#transferTax += newTransferTaxa
+    }
 }
+
+
 console.log(Bank.createdBanks);
 const bank1 = new Bank(100, 'LuaBank', 0.01);
 console.log(bank1)
 
 console.log(Bank.createdBanks);
-//console.log(bank1.transferTax); // 0.01
+console.log(bank1.transferTax); // 0.01
 bank1.transferTax = 0.02
 console.log(bank1.transferTax); // 0.02
 
