@@ -41,9 +41,9 @@ class Client {
       const bankIndex = this.banks.findIndex(
         (element) => element.bankCode === bank.bankCode
       );
-
       if (bankIndex !== -1) {
         this.banks.splice(bankIndex, 1);
+        Bank.createdBanks[bankIndex].qtdClients--;
         return `O banco foi removido com sucesso.`;
       } else {
         return `O banco não está associado ao cliente.`;
