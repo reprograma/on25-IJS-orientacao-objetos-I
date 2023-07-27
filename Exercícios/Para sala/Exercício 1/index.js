@@ -17,4 +17,3 @@ class Employee {
 const employee1 = new Employee(123, 'Luara', 15000);
 console.log(employee1)
 employee1.raiseSalary(10)
-console.log(employee1.salary)

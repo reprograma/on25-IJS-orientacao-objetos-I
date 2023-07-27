@@ -21,3 +21,4 @@ class Income {
 const income1 = new Income(1000, 0.05);
 income1.printBalance();
 income1.calculateIncome();
+
