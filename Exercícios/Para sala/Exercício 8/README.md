@@ -23,7 +23,7 @@ class Animal {
     this.age = age;
     this.energy = 0;
     this.hungry = hungry;
-    this.constructor.animals.push({ name: this.name, hungry: this.hungry });
+    this.constructor.animals.push({ name: this.name, hungry: this.hungry, energy: this.energy });
   }
 
   eat() {
@@ -37,6 +37,8 @@ class Animal {
     console.log(`O ${this.type} chamado ${this.name} está dormindo.`);
     this.energy += hours;
     console.log(`Energia atual: ${this.energy}.`);
+
+    this.constructor.updateAnimalsEnergy(this.name, this.energy);
   }
 
   static updateAnimalsHungry(name, updatedHungry) {
@@ -47,6 +49,11 @@ class Animal {
 		this.animals[animalIndex].hungry = updatedHungry;
 	}
 
+  static updateAnimalsEnergy(name, updatedEnergy){
+    const animalIndex = this.animals.findIndex((animal) => animal.name === name);
+    this.animals[animalIndex].energy = updateEnergy;
+  }
+
   static nextToEat() {
     const sortedByHungry = this.animals.sort((a, b) => {
       return b.hungry - a.hungry;
@@ -56,7 +63,22 @@ class Animal {
       `O próximo animal para comer é ${sortedByHungry[0].name}. Ele está com ${sortedByHungry[0].hungry} de fome.`
     );
   }
+
+  static nextToSleep(){
+    const sortedByEnergy = this.animals.sort((a, b) => {
+      return b.energy - a.energy;
+    });
+
+    if(this.energy <= 5){
+      console.log(`O ${sortedByEnergy[0].name} precisa dormir.`)
+    }else{
+      console.log(`${sortedByEnergy[0].name} ainda tem energia.`)
+    }
+  }
 }
+
+let gato = new Animal("gato", "bino", 2, 3, 5)
+console.log(gato)
 ```
 
 Faça as seguintes modificações:
