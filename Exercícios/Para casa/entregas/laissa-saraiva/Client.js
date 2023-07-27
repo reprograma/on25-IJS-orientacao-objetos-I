@@ -1,4 +1,4 @@
-const {Bank} = require('./Bank')
+const { Bank } = require("./Bank");
 // const{BankAccount} = require('./BankAccount')
 class Client {
   name;
@@ -16,36 +16,40 @@ class Client {
   }
 
   addBank(bank) {
-    if(!(bank instanceof Bank)) {
-      return `Insira um Banco válido.`
+    if (!(bank instanceof Bank)) {
+      return `Insira um Banco válido.`;
     } else {
-      if(!this.banks.includes(bank)) {
+      if (!this.banks.includes(bank)) {
         this.banks.push(bank);
-        bank.qtdClient ++;
-        return console.log("O banco foi adicionado.")
+
+        const bankIndex = Bank.createdBanks.findIndex(
+          (element) => element.bankCode == bank.bankCode
+        );
+        Bank.createdBanks[bankIndex].qtdClients++;
+
+        return console.log("O banco foi adicionado.");
+      } else {
+        return `Banco já associado ao cliente!`;
       }
     }
   }
 
-  removeBank() {
+  removeBank(bank) {
+    if (!(bank instanceof Bank)) {
+      return `Insira um Banco válido.`;
+    } else {
+      const bankIndex = this.banks.findIndex(
+        (element) => element.bankCode === bank.bankCode
+      );
 
+      if (bankIndex !== -1) {
+        this.banks.splice(bankIndex, 1);
+        return `O banco foi removido com sucesso.`;
+      } else {
+        return `O banco não está associado ao cliente.`;
+      }
+    }
   }
 }
 
-const testeBank = new Bank( 789 , "testBank", 0.05);
-const testeBank2 = new Bank( 245 , "Teste 2", 0.04);
-
-const laissa = new Client("Laíssa", 13213213205)
-const lucas = new Client("Lucas", 13285965874)
-console.log(testeBank)
-console.log(laissa)
-
-laissa.addBank("nunbank")
-console.log(laissa.addBank("nunbank"))
-console.log(laissa.addBank(testeBank))
-console.log(laissa.addBank(testeBank2))
-console.log(lucas.addBank(testeBank2))
-console.log(laissa.banks)
-
-
-module.exports = {Client}
+module.exports = { Client };
