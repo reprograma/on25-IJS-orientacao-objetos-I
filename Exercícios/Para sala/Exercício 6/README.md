@@ -1,17 +1,15 @@
 # Exercício de Sala 🏫
 
 - Conteúdo teórico:
-  [Programação Orientada a Objetos](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.2%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos.md)
+  [Abstração](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.3%20-%20Abstra%C3%A7%C3%A3o.md) e [Encapsulamento](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.4%20-%20Encapsulamento.md)
 
-## Exercício 1
+## Exercício 6
 
-Escreva uma classe chamada `Employee`, que modela um funcionário com os seguintes atributos:
+Modifique a classe `InvoiceItem`, criada no exercício 2, conforme o diagrama de classe abaixo:
 
-- [ ] id
-- [ ] name
-- [ ] salary
-
-Defina um método `raiseSalary(percent)` que aumenta o salário baseado numa dada porcentagem. Escreva a classe `Employee`.
+<div style="text-align:center;">
+  <img src="https://github.com/reprograma/on25-IJS-orientacao-objetos-I/assets/26902816/154087b0-b92c-443d-b768-6a615d799823" />
+</div>
 
 Teste tudo o que foi criado.
 
