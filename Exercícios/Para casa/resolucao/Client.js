@@ -10,6 +10,10 @@ class Client {
 		this.#cpf = cpf;
 	}
 
+	get cpf() {
+		return this.#cpf;
+	}
+
 	hasAccountInThisBank(bank) {
 		return (
 			this.banks.find((element) => element.bankCode === bank.bankCode) !==
