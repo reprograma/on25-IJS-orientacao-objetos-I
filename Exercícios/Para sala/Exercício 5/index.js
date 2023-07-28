@@ -52,7 +52,7 @@ class Employee {
 	}
 }
 
-const employee = new Employee(123, 'Luara', 'Rangel', 5000);
+const employee = new Employee(123, 'Deborah', 'Gomes', 5000);
 console.log(employee);
 console.log('id:', employee.id);
 console.log('firstName:', employee.firstName);
