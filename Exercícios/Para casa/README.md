@@ -9,10 +9,10 @@
 ### Bank
 Defina uma classe para um objeto `Bank`.
 O banco deve possuir as seguintes propriedades:
-- [ ] `bankCode`: Código do banco
+- [ ] `bankCode`: Código do banco 🎁
   - Número do banco, recebido por parâmetro durante a instanciação.
 
-- [ ] `bankName`: Nome do banco
+- [ ] `bankName`: Nome do banco 🎁
   - Recebido por parâmetro durante a instanciação.
 
 - [ ] `transferTax`: Taxa de transferência para outros bancos
@@ -20,7 +20,7 @@ O banco deve possuir as seguintes propriedades:
   - Deve ser um parâmetro privado.
   - Deve ter um método get e um método set.
 
-- [ ] `createdBanks`: Bancos criados
+- [ ] `createdBanks`: Bancos criados 🎁
   - Propriedade estática, sendo ela uma array de objetos que é inicialmente vazia e é atualizada a cada vez que um novo banco é criado, contendo:
     - `Código do banco criado`
     - `Quantidade de clientes que esse banco possui`
@@ -48,7 +48,7 @@ console.log(bank1.transferTax); // 0.02
 ### Client
 Defina ainda uma classe `Client`.
 A classe deve possuir as seguintes propriedades:
-- [ ] `name`: Nome da pessoa
+- [ ] `name`: Nome da pessoa 🎁
   - Recebido por parâmetro durante a instanciação.
 
 - [ ] `cpf`: CPF
@@ -56,19 +56,19 @@ A classe deve possuir as seguintes propriedades:
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `banks`: Uma array de bancos ao qual é associada
+- [ ] `banks`: Uma array de bancos ao qual é associada 🎁
   - Deve ser inicializado vazio.
 
 Como métodos da classe `Client`, temos:
 - [ ] `addBank(bank)`: associa um banco a esse cliente.
   - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
   - Verifique se o cliente já tem esse banco associado a ele. Se tiver, retorne uma mensagem e não adicione novamente.
-  - Lembrar de aumentar a quantidade de clientes que esse banco possui.
+  - Lembrar de aumentar a quantidade de clientes que esse banco possui. 🎁
 
 - [ ] `removeBank(bank)`: desassocia um banco a esse cliente.
   - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
   - Verifique se o cliente tem esse banco associado a ele. Se não tiver, retorne uma mensagem e termine a execução da função.
-  - Lembrar de diminuir a quantidade de clientes que esse banco possui.
+  - Lembrar de diminuir a quantidade de clientes que esse banco possui. 🎁
 
 Exemplo:
 ```javascript
@@ -108,16 +108,17 @@ A conta deve possuir as seguintes propriedades:
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
-  - Deve ser inicializado com 0.
-  - Deve ser um parâmetro privado.
-  - Deve ter um método get.
-
-- [ ] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
-  - Cada conta tem direito a realizar X (você define) retiradas gratuitas. Após isso, essa taxa começa a ser cobrada em cada retirada.
-  - Deve ser inicializada com algum valor (exemplo: 0.03).
-  - Deve ser um parâmetro privado.
-  - Deve ter um método get e um método set.
+❌ **A SER IMPLEMENTADO APENAS NA SEMANA 6:** ❌
+> - [ ] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
+>   - Deve ser inicializado com 0.
+>   - Deve ser um parâmetro privado.
+>   - Deve ter um método get.
+> 
+> - [ ] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
+>   - Cada conta tem direito a realizar X (você define) retiradas gratuitas. Após isso, essa taxa começa a ser cobrada em cada retirada.
+>   - Deve ser inicializada com algum valor (exemplo: 0.03).
+>   - Deve ser um parâmetro privado.
+>   - Deve ter um método get e um método set.
 
 A classe `BankAccount` possui os seguintes métodos:
 - [ ] `credit(amount)`: adiciona o valor especificado ao montante.
@@ -132,17 +133,18 @@ A classe `BankAccount` possui os seguintes métodos:
   - Caso a transferência seja para um banco diferente do cliente que está realizando, utilize a taxa do banco de origem.
   - Imprima na console o resultado.
 
-- [ ] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
-  - Caso a quantidade de retiradas tenha ultrapassado o limite, a taxa deve ser cobrada.
-  - A cada retirada realizada, informe ao cliente quantas retiradas ele já realizou e se ainda possui retiradas gratuitas.
-    - Se sim, informe quantas.
-    - Se não, informe a taxa que será cobrada a cada retirada.
-  - Caso não haja valor suficiente para a operação, ela deve retornar uma mensagem para o usuário.
-  - Imprima na console o resultado.
-
 - [ ] `closeAccount()`: encerra a conta.
   - Caso a conta possua saldo não é possível encerrá-la.
   - Imprima na console o resultado.
+
+❌ **A SER IMPLEMENTADO APENAS NA SEMANA 6:** ❌
+> - [ ] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
+>   - Caso a quantidade de retiradas tenha ultrapassado o limite, a taxa deve ser cobrada.
+>   - A cada retirada realizada, informe ao cliente quantas retiradas ele já realizou e se ainda possui retiradas gratuitas.
+>     - Se sim, informe quantas.
+>    - Se não, informe a taxa que será cobrada a cada retirada.
+>  - Caso não haja valor suficiente para a operação, ela deve retornar uma mensagem para o usuário.
+>  - Imprima na console o resultado.
 
 Exemplo:
 ```javascript
