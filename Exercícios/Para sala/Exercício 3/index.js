@@ -1,33 +1,34 @@
-class Account {
+class Account{
 	id;
 	name;
-	#balance;
+	balance; // saldo inicial
 
-	constructor(id, name, balance) {
-		this.id = id;
-		this.name = name;
-		this.#balance = balance;
+	constructor(id, name, balance){
+		this.id=id;
+		this.name=name;
+		this.balance=balance;
 	}
 
-	credit(amount) {
-		this.#balance += amount;
-		// console.log(`O saldo atualizado é de R$ ${this.#balance}`);
+	credit(amount){ // valor
+		this.balance = this.balance + amount;
+		console.log(` O Saldo atual da conta é ${this.balance}`)
+
 	}
 
-	debit(amount) {
-		this.#balance -= amount;
-		// console.log(`O saldo atualizado é de R$ ${this.#balance}`);
+	debit(amount){
+    this.balance = this.balance - amount;
+	console.log(` O Saldo atual da conta é ${this.balance}`)
 	}
 
 	transferTo(anotherAccount, amount) {
-		if (!(anotherAccount instanceof Account)) {
+		if (!(anotherAccount instanceof Account)) { // se anotherAcount nao(!) é uma instancia de Account e com o return ele sai e segue pro if 
 			console.log('Informe uma conta válida!');
 			return;
 		}
 
-		if (this.#balance < amount) {
+		if (this.balance < amount) {
 			console.log(
-				`Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${this.#balance}`
+				`Você não tem saldo suficiente para realizar essa operação. Seu saldo atual é de R$ ${this.balance}`
 			);
 			return;
 		}
@@ -40,12 +41,13 @@ class Account {
 	}
 }
 
-const contaDaLuara = new Account(123, 'Luara', 10000);
-contaDaLuara.credit(5000);
-contaDaLuara.debit(300);
+const contaDaMichele = new Account(321, "Michele Feitosa", 10000)
+contaDaMichele.credit(7000)
+contaDaMichele.debit(200)
 
-const contaDaAle = new Account(456, 'Ale', 50000);
-contaDaLuara.transferTo(contaDaAle, 1000);
+const contaDaMaite = new Account(456, "Maitê Feitosa", 6000)
+contaDaMichele.transferTo(contaDaMaite, 1000)
 
-console.log(contaDaLuara)
-console.log(contaDaAle)
+console.log(contaDaMaite);
+
+
