@@ -9,7 +9,7 @@
 ### Bank
 Defina uma classe para um objeto `Bank`.
 O banco deve possuir as seguintes propriedades:
-- [ ] `bankCode`: Código do banco 🎁
+- [] `bankCode`: Código do banco 🎁
   - Número do banco, recebido por parâmetro durante a instanciação.
 
 - [ ] `bankName`: Nome do banco 🎁
@@ -48,15 +48,15 @@ console.log(bank1.transferTax); // 0.02
 ### Client
 Defina ainda uma classe `Client`.
 A classe deve possuir as seguintes propriedades:
-- [ ] `name`: Nome da pessoa 🎁
+- [ok] `name`: Nome da pessoa 🎁
   - Recebido por parâmetro durante a instanciação.
 
-- [ ] `cpf`: CPF
+- [ok] `cpf`: CPF
   - Recebido por parâmetro durante a instanciação.
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `banks`: Uma array de bancos ao qual é associada 🎁
+- [ok] `banks`: Uma array de bancos ao qual é associada 🎁
   - Deve ser inicializado vazio.
 
 Como métodos da classe `Client`, temos:

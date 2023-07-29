@@ -1,88 +1,65 @@
-const { Bank } = require("Bank");
-const { Client } = require("Client");
+const { Bank } = require("./Bank");
+const { Client } = require("./Client");
 
 class BankAccount {
   accountNumber;
   agencyNumber;
-  #balance;
-  #qtWithdrawal;
-  #withdrawalTax;
+  #balance = 0;
+  client;
+  bank;
 
-  constructor(Client, Bank, accountNumber, agencyNumber) {
-    this.Client = Client;
-    this.Bank = Bank;
+  constructor(client, bank, accountNumber, agencyNumber) {
+    this.client = client instanceof Client;
+    this.bank = bank instanceof Bank;
     this.accountNumber = accountNumber;
     this.agencyNumber = agencyNumber;
     this.#balance = 0;
-    this.#qtWithdrawal = 0;
-    this.#withdrawalTax = 0.01;
-    BankAccount.createBanks.push(this);
   }
 
   get balance() {
     return this.#balance;
   }
 
-  get qtWithdrawal() {
-    return this.#qtWithdrawal;
-  }
-
-  get withdrawalTax() {
-    return this.#withdrawalTax;
-  }
-
-  set withdrawalTax(withdrawalTaxes) {
-    this.#withdrawalTax = withdrawalTaxes;
-  }
-
   credit(amount) {
-    this.balance += amount;
-    console.log(`Saldo atual R$ ${this.balance}`);
+    this.#balance += amount;
+    console.log(`Crédito. Saldo atual R$ ${this.balance}`);
   }
 
   debit(amount) {
-    this.balance -= amount;
-    console.log(`Saldo atual R$ ${this.balance}`);
+    this.#balance -= amount;
+    console.log(`Débito. Saldo atual R$ ${this.balance}`);
   }
 
   transferTo(anotherAccount, amount) {
     if (!(anotherAccount instanceof BankAccount)) {
-      console.log(`Conta inválida`);
+      console.log(`Algo deu errado. Conta inválida`);
       return;
     }
 
-    if (this.balance < amount) {
-      console.log(`Saldo insuficiente ${this.balance}`);
-      return;
+    if(this.bank.bankCode !== anotherAccount.bank.bankCode){
+      amount += amount * (this.bank.transferTax * 100)
+      console.log(`Taxa transação bancaria taxado `)
     }
 
-    //    this.balance -=amount;
-    this.debit(amount);
-    anotherAccount.credit(amount);
-    console.log(`Transfer ${this.balance}`);
-  }
-
-  cashWithdrawal(amount) {
-    if (this.balance < amount) {
-      console.log(`Saldo insuficiente ${this.balance}`);
-      return;
-    }
-
-    if (this.balance >= amount) {
-      if (this.balance > 5) {
-        console.log(
-          `Cliente, ultrapassou limite de saque. Haverá adição de taxa`
-        );
-      }
-      this.balance -= amount;
+    if (this.#balance >= amount) {
+      this.debit(amount);
+      anotherAccount.credit(amount);
+      console.log(`Saldo atual da conta de origem é R$${this.#balance}`);
+      console.log(
+        `Saldo atual da conta de destino é R$${anotherAccount.#balance}`
+      );
+    } else {
+      console.log(`Saldo negativo de R$${this.balance}`);
     }
   }
 
   closeAccount() {
-    if (this.#balance > 0) {
-      console.log(`Saldo não vazio ${this.balance}`);
-    } else {
+    if (this.#balance === 0 || this.#balance <= 0) {
       console.log(`Fechamento de conta concluída`);
+    } else {
+      console.log(
+        `Saldo de R$${this.balance}. O saldo deve ser zerado antes encerramento da conta.`
+      );
     }
   }
 }
