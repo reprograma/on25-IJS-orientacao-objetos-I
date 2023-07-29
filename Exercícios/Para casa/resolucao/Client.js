@@ -1,4 +1,4 @@
-const Bank = require("./Bank");
+const {Bank, bank1 } = require("./Bank");
 
 class Client {
   name;
@@ -75,4 +75,4 @@ console.log(client1); // { name: 'Maria', banks: [ Bank { bankCode: 100, bankNam
 client1.removeBank(bank1); // Banco 100 removido da cliente Maria
 console.log(client1); // { name: 'Maria', banks: [] }
 
-module.exports = Client;
+module.exports = { Client, client1};

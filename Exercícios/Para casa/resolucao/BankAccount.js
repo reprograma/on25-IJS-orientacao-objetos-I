@@ -1,5 +1,5 @@
-const Client = require("./Client");
-const Bank = require("./Bank");
+const { Bank, bank1 } = require("./Bank")
+const { Client, client1 } = require("./Client")
 
 class BankAccount {
   client;

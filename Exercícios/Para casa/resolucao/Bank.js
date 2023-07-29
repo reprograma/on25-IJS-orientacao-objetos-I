@@ -46,4 +46,4 @@ console.log(bank1.transferTax); // 0.01
 bank1.transferTax = 0.02;
 console.log(bank1.transferTax); // 0.02
 
-module.exports = Bank;
+module.exports = { Bank, bank1} ;
