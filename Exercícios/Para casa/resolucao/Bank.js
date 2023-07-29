@@ -2,6 +2,7 @@ class Bank {
   bankCode;
   bankName;
 
+  totalClients;
   #transferTax;
 
   static createdBanks = [];
