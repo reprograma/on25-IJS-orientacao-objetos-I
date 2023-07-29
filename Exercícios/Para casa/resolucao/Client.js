@@ -1,4 +1,4 @@
-const Bank = require('./Bank');
+const Bank = require("./Bank");
 
 class Client {
   name;
@@ -14,62 +14,65 @@ class Client {
     return this.#cpf;
   }
 
-
   addBank(bank) {
-
     if (!(bank instanceof Bank)) {
-      console.log('Error: Invalid bank instance. Please provide a valid Bank.');
+      console.log("Error: Invalid bank instance. Please provide a valid Bank.");
       return;
     }
-  
+
     if (this.banks.includes(bank)) {
-      console.log(`The client already has the bank ${bank.bankName} associated.`);
+      console.log(
+        `The client already has the bank ${bank.bankName} associated.`
+      );
       return;
     }
-  
-    this.banks.push(bank);    
-    
-    const bankIndex = Bank.createdBanks.findIndex((element) => element.bankCode === bank.bankCode);
+
+    this.banks.push(bank);
+
+    const bankIndex = Bank.createdBanks.findIndex(
+      (element) => element.bankCode === bank.bankCode
+    );
     if (bankIndex !== -1) {
       Bank.createdBanks[bankIndex].totalClients++;
-  }
+    }
   }
 
   removeBank(bank) {
     if (!(bank instanceof Bank)) {
-      console.log('Error: Invalid bank instance. Please provide a valid Bank.');
+      console.log("Error: Invalid bank instance. Please provide a valid Bank.");
       return;
     }
-  
+
     const bankIndex = this.banks.indexOf(bank);
     if (bankIndex === -1) {
-      console.log(`The client does not have the bank ${bank.bankName} associated.`);
+      console.log(
+        `The client does not have the bank ${bank.bankName} associated.`
+      );
       return;
     }
-  
+
     this.banks.splice(bankIndex, 1);
-  
-    const bankIndexInCreatedBanks = Bank.createdBanks.findIndex((element) => element.bankCode === bank.bankCode);
+
+    const bankIndexInCreatedBanks = Bank.createdBanks.findIndex(
+      (element) => element.bankCode === bank.bankCode
+    );
     if (bankIndexInCreatedBanks !== -1) {
       Bank.createdBanks[bankIndexInCreatedBanks].totalClients--;
     }
   }
 }
 
-const client1 = new Client ('Deborah Gomes', '111.111.111-11');
+const client1 = new Client("Deborah Gomes", "111.111.111-11");
 
-// client1.addBank(bank1);
-// client1.addBank(bank2);
-// client1.addBank(bank3);
+console.log(client1); // { name: 'Maria', banks: [] }
+console.log(client1.cpf); // 12345678900
 
-// // client1.addBank(bank2);
+// Adicionando um banco a um cliente
+client1.addBank(bank1); // Banco 100 adicionado à cliente Maria
+console.log(client1); // { name: 'Maria', banks: [ Bank { bankCode: 100, bankName: 'LuaBank' } ] }
 
-// // client1.removeBank(bank3);
-// // client1.removeBank(bank3);
-
-// console.log(client1.getBanks());
-
-
-
+// Removendo um banco de um cliente
+client1.removeBank(bank1); // Banco 100 removido da cliente Maria
+console.log(client1); // { name: 'Maria', banks: [] }
 
 module.exports = Client;
