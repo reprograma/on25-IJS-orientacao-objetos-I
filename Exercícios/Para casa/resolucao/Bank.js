@@ -24,10 +24,6 @@ class Bank {
   set transferTax(tax) {
     return (this.#transferTax = tax);
   }
-
-  static getCreatesBanks() {
-    return Bank.createdBanks;
-  }
 }
 
 // A propriedade estática createdBanks é uma array vazia
