@@ -15,15 +15,15 @@ class BankAccount {
 
     if (!isValidClient) {
       console.log(
-        "Error: Invalid client instance. Please provide a valid Client object."
+        "Invalid client instance. Please provide a valid Client object."
       );
     } else if (!isValidBank) {
       console.log(
-        "Error: Invalid bank instance. Please provide a valid Bank object."
+        "Invalid bank instance. Please provide a valid Bank object."
       );
     } else if (!isClientAssociated) {
       console.log(
-        "Error: The client is not associated with the provided bank."
+        "The client is not associated with the provided bank."
       );
     } else {
       this.client = client;
@@ -49,13 +49,13 @@ class BankAccount {
         console.log(
           `Debit of ${amount} applied. New balance: ${this.#balance}`
         ))
-      : console.log("Error: Insufficient funds.");
+      : console.log("Insufficient funds.");
   }
 
   transferTo(anotherAccount, amount) {
     if (!(anotherAccount instanceof BankAccount)) {
       console.log(
-        "Error: Invalid account instance. Please provide a valid BankAccount object."
+        "Invalid account instance. Please provide a valid BankAccount object."
       );
       return;
     }
@@ -74,7 +74,7 @@ class BankAccount {
         `Transferred ${amount} ${transferMessage} New balance: ${this.#balance}`
       );
     } else {
-      console.log("Error: Insufficient amount for the transfer.");
+      console.log("Insufficient amount for the transfer.");
     }
   }
 
@@ -82,7 +82,7 @@ class BankAccount {
     const message =
       this.#balance === 0
         ? "Account successfully closed."
-        : "Error: Account must have zero balance to be closed.";
+        : "Account must have zero balance to be closed.";
     console.log(message);
   }
 }

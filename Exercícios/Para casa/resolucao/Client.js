@@ -16,7 +16,7 @@ class Client {
 
   addBank(bank) {
     if (!(bank instanceof Bank)) {
-      console.log("Error: Invalid bank instance. Please provide a valid Bank.");
+      console.log("Invalid bank instance. Please provide a valid Bank.");
       return;
     }
 
@@ -39,7 +39,7 @@ class Client {
 
   removeBank(bank) {
     if (!(bank instanceof Bank)) {
-      console.log("Error: Invalid bank instance. Please provide a valid Bank.");
+      console.log("Invalid bank instance. Please provide a valid Bank.");
       return;
     }
 
