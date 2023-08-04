@@ -61,9 +61,9 @@ A classe deve possuir as seguintes propriedades:
 
 Como métodos da classe `Client`, temos:
 - [ ] `addBank(bank)`: associa um banco a esse cliente.
-  - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
+  - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.(instance of bank)
   - Verifique se o cliente já tem esse banco associado a ele. Se tiver, retorne uma mensagem e não adicione novamente.
-  - Lembrar de aumentar a quantidade de clientes que esse banco possui.
+  - Lembrar de aumentar a quantidade de clientes que esse banco possui.(incrementar)
 
 - [ ] `removeBank(bank)`: desassocia um banco a esse cliente.
   - O parâmetro `bank` deve obrigatoriamente ser do tipo `Bank`.
@@ -108,12 +108,12 @@ A conta deve possuir as seguintes propriedades:
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
+- [ ***próxima semana***] `qtdWithdrawal`: Quantidade de retiradas de dinheiro em bancos 24 horas
   - Deve ser inicializado com 0.
   - Deve ser um parâmetro privado.
   - Deve ter um método get.
 
-- [ ] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
+- [  ***próxima semana***] `withdrawalTax`: Taxa a ser cobrada em cada retirada em bancos 24 horas
   - Cada conta tem direito a realizar X (você define) retiradas gratuitas. Após isso, essa taxa começa a ser cobrada em cada retirada.
   - Deve ser inicializada com algum valor (exemplo: 0.03).
   - Deve ser um parâmetro privado.
@@ -132,7 +132,7 @@ A classe `BankAccount` possui os seguintes métodos:
   - Caso a transferência seja para um banco diferente do cliente que está realizando, utilize a taxa do banco de origem.
   - Imprima na console o resultado.
 
-- [ ] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
+- [ ***próxima semana***] `cashWithdrawal(amount)`: realiza retiradas de dinheiro em bancos 24 horas.
   - Caso a quantidade de retiradas tenha ultrapassado o limite, a taxa deve ser cobrada.
   - A cada retirada realizada, informe ao cliente quantas retiradas ele já realizou e se ainda possui retiradas gratuitas.
     - Se sim, informe quantas.

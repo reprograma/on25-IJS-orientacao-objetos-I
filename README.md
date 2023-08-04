@@ -57,6 +57,7 @@ Os métodos para o objeto também são implementados dentro do escopo da classe:
 
 ```javascript
 class Animal {
+  //declaro atributos antes de constructor porque facilita o prenchimento dele
   type;
   name;
   age;
