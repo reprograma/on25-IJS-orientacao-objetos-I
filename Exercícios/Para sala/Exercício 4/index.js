@@ -1,25 +1,26 @@
 class Income {
-	balance;
-	interestRate;
+  balance;
+  interestRate;
 
-	constructor(initialBalance, interestRate) {
-		this.balance = initialBalance;
-		this.interestRate = interestRate;
-	}
 
-	printBalance() {
-		console.log(`O saldo atual é de R$ ${this.balance}`);
-	}
+  constructor(initialBalance, initialInterestRate) {
+    this.balance = initialBalance;
+    this.interestRate = initialInterestRate
+  }
+  printBalance() {
+    return console.log(`O saldo é ${this.balance}`);
+  }
 
-	calculateIncome() {
-		const income = this.balance * this.interestRate;
+  calculateIncome() {
+    const income =  this.balance * this.interestRate
+    console.log(`O rendimento atual é de ${income}`)
     this.balance += income
-		console.log(`O rendimento atual é de R$ ${income}`);
-	}
+  }
+
 }
 
-const income1 = new Income(1000, 0.05);
+const income1 = new Income(1000, 0.05)
 income1.printBalance()
 income1.calculateIncome()
+console.log(income1)
 
-console.log(income1.balance)
