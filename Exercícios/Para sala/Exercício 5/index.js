@@ -1,4 +1,22 @@
-class Employee {
+
+
+const employee = new Employee(123, "Luara", "Rangel", 5000);
+console.log(employee);
+console.log("id:", employee.id);
+console.log("firstName:", employee.firstName);
+console.log("lastName:", employee.lastName);
+console.log("name:", employee.name);
+console.log("salary:", employee.salary);
+console.log("annualSalary:", employee.annualSalary);
+
+employee.salary = 6000;
+console.log("salary:", employee.salary);
+
+employee.raiseSalary(20);
+console.log("salary:", employee.salary);
+
+console.log("Employee:", employee.toString());
+=======
 	#id;
 	#firstName;
 	#lastName;
@@ -67,4 +85,4 @@ console.log('salary:', employee.salary);
 employee.raiseSalary(20);
 console.log('salary:', employee.salary);
 
-console.log('Employee:', employee.toString());
+

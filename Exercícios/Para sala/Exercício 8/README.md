@@ -1,6 +1,17 @@
 # Exercício de Sala 🏫  
 
 - Conteúdo teórico: 
+
+[Abstração](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.3%20-%20Abstra%C3%A7%C3%A3o.md) e [Encapsulamento](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.4%20-%20Encapsulamento.md)
+
+## Exercício 7
+
+Modifique a classe `Account`, criada no exercício 3, conforme o diagrama de classe abaixo:
+
+<div style="text-align:center;">
+  <img src="https://github.com/reprograma/on25-IJS-orientacao-objetos-I/assets/26902816/72ffbe7a-8af6-42d5-90f7-f62284808858" />
+</div>
+
 [Métodos e propriedades estáticas](../../../5.%20Introdu%C3%A7%C3%A3o%20%C3%A0%20Orienta%C3%A7%C3%A3o%20a%20Objeto%20I/5.5%20-%20Static%20(extra).md)
 
 ## Exercício 8
@@ -63,12 +74,7 @@ Faça as seguintes modificações:
 - [ ] Dentro da propriedade estática `animals`, salve também a `energy` de cada animal (além de `name` e `hungry`).
 - [ ] Crie um método estático que atualize a `energy` de cada animal dentro da array `animals` (igual estamos fazendo com `hungry`).
 - [ ] Dentro do método `sleep`, chame o método de atualização de energy criado no passo anterior, informando, como propriedades, o nome e a nova energia do animal.
-- [ ] Por fim, crie um método estático que informe quais animais precisam dormir (perceba que pode ser mais de 1). Para isso, a regra é: *se a energia estiver menor ou igual a 5*, esse animal precisa dormir.
-
-Teste tudo o que foi criado.
-
----
-
+- [ ] Por fim, crie um método estático que informe quais animais precisam dormir (perceba que pode ser mais de 1). Para isso, a regra é: *se a energia estiver menor ou igual a 5*, esse animal precisa dormirTeste tudo o que foi criado.
 Terminou o exercício? Dá uma olhada nessa checklist e confere se tá tudo certinho, combinado?!
 
 - [ ] Fiz o fork do repositório.
