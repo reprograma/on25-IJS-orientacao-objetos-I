@@ -10,11 +10,11 @@ class Employee {
   }
 
   raiseSalary(percent) {
-    this.salary += (this.salary * (percent/100))
+    this.salary += this.salary * (percent / 100);
   }
 }
 
-const employee1 = new Employee(123, 'Luara', 15000);
-console.log(employee1)
-employee1.raiseSalary(10)
-console.log(employee1.salary)
+const Employee1 = new Employee(123, "Luara", 15000);
+console.log(Employee1);
+Employee1.raiseSalary(10);
+console.log(Employee1.salary);
