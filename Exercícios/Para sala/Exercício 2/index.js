@@ -1,16 +1,16 @@
 class InvoiceItem {
-	id;
-	description;
-	quantity;
-	unityPrice;
+  id;
+  description;
+  quantity;
+  unityPrice;
 
-	constructor(id, description, quantity, unityPrice) {
-		this.id = id;
-		this.description = description;
-		this.quantity = quantity;
-		this.unityPrice = unityPrice;
-	}
+  constructor(id, description, quantity, unityPrice) {
+    this.id = id;
+    this.description = description;
+    this.quantity = quantity;
+    this.unityPrice = unityPrice;
+  }
 }
 
-const item1 = new InvoiceItem(123, 'Produto 1', 3, 19.9);
-console.log(item1);
+const item = new InvoiceItem(2, "produto 1", 3, 20);
+console.log(item);
